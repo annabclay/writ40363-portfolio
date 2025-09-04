@@ -3,6 +3,7 @@
 * {
 border: 1px solid red;
 }
+
 header {
 
     display: flex;
@@ -21,7 +22,7 @@ header {
     width: 45%
 }
 
-header_pic {
+.header_pic {
     
     background-color:cadetblue; 
     height: 50hv;
@@ -30,11 +31,10 @@ header_pic {
 
 
 h1 {
-    color: #4d1979:#4d1979
-
-
+    color: #4d1979;
 }
+
 h2 {
-    color: #4d1979:#4d1979   
-    background-color: rbg(42, 177, 177)
+    color: #4d1979;   
+    background-color: rbg(42, 177, 177);
 }
