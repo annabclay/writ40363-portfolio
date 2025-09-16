@@ -76,6 +76,14 @@ background-color: #f8f9fa;
     color: #6c757d;
 }
 
+.header_pic img {
+width: 100%;
+height: 100%;
+max-width: 400px;
+max-eight: 400px;
+object-fit: cover;
+border-radius: 10px;  
+}
 
 main {
 max-width: 65ch; /* About 65 characters wide - good for reading on any screen */
@@ -83,10 +91,30 @@ margin: 0 auto; /* Centers the content */
 padding: 10%; /* 5% padding scales with screen size */
 }
 
-
-section {
-  margin-bottom: 2rem;
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 0;
+  align-items: center;
 }
+.about-image {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-raduis: 8px;
+}
+
+.about-text {
+  flex: 2;
+  min-width: 250px;}
+
 
 /* Consistent spacing between paragraphs */
 p + p {
@@ -129,4 +157,96 @@ p {
   font-size: 1rem;
   margin-bottom: 1rem;
   color: #555; /* Slightly lighter for body text */
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-card {
+  padding: 2rem;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  margin-bottom: 0.5rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2c3e50;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #28a745;
+}
+
+/* Main container for all sections */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Responsive container padding */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Consistent section spacing */
+section {
+  padding: 3rem 0;
+}
+
+/* Section headings */
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+/* Add some visual interest to section headings */
+section h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #28a745;
+  margin: 1rem auto 0;
+  border-radius: 2px;
 }
