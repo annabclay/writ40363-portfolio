@@ -345,6 +345,7 @@ section h2::after {
   .projects-container {
     grid-template-columns: 1fr 1fr;
   }
+  
 }
 
 /* Desktop (1024px and up) */
@@ -352,3 +353,23 @@ section h2::after {
   .skills-container {
     grid-template-columns: repeat(4, 1fr);
   } }
+
+
+  /* --- Project images --- */
+.project-card img {
+  max-width: 300px;   /* shrink image width */
+  width: 100%;        /* scale nicely on small screens */
+  height: auto;       /* keep aspect ratio */
+  display: block;     /* removes extra white space */
+  margin: 0 auto 1rem; /* centers and adds space below */
+  border-radius: 8px; /* optional rounded corners */
+}
+
+.project-card img {
+  max-width: 300px;   /* shrink image width */
+  width: 100%;        /* scale nicely on small screens */
+  height: auto;       /* keep aspect ratio */
+  display: block;     /* removes extra white space */
+  margin: 0 auto 1rem; /* centers and adds space below */
+  border-radius: 8px; /* optional rounded corners */
+}
