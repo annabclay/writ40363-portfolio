@@ -6,7 +6,7 @@
  --heading-color: #2c3e50;
  --text-color: #1f2937;
  --light-text: #6b7280;
- --background: #ffffff;
+ --background: #e1effc;
  --light-background: #f9fafb;
  --card-background: #f8f9fa;
  --card-border: #e9ecef;
@@ -74,7 +74,7 @@ background-color: #f8f9fa;
 
 .header_text {
 
-    background-color:cadetblue;
+    background-color:#e1effc;
     flex: 1;
     padding: 2rem;
 }
@@ -82,7 +82,7 @@ background-color: #f8f9fa;
 
 .header_pic {
     flex: 1;
-    background-color: #e9ecef;
+    background-color: #e1effc;
     min-height: 300px;
     border-radius: 10px;
     display: flex;
@@ -258,7 +258,7 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: white;
+  background: #e1effc;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -317,7 +317,7 @@ section h2::after {
   display: block;
   width: 50px;
   height: 3px;
-  background: #28a745;
+  background: #1f2937;
   margin: 1rem auto 0;
   border-radius: 2px;
 }
