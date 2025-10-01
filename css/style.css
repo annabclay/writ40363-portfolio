@@ -374,3 +374,28 @@ section h2::after {
   border-radius: 8px; /* optional rounded corners */
 }
 
+/* Mobile-only fixes */
+@media (max-width: 600px) {
+  /* stack header nicely */
+  header { display: block; height: auto; padding: 1rem; }
+  .header_text, .header_pic { width: 100%; }
+  .header_pic { min-height: auto; background-color: transparent; }
+
+  /* readable type on small screens */
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  p  { font-size: 1rem; }
+
+  /* projects: single column */
+  .projects-container { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+
+  /* images scale down */
+  img, video { max-width: 100%; height: auto; }
+
+  /* nav wraps instead of squishing */
+  .nav-container { flex-wrap: wrap; gap: .5rem; }
+  .nav-links { flex-wrap: wrap; gap: 1rem; }
+}
+
+/* Optional global safety (keeps desktop fine) */
+img, video { max-width: 100%; height: auto; }
