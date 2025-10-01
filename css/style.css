@@ -374,28 +374,40 @@ section h2::after {
   border-radius: 8px; /* optional rounded corners */
 }
 
-/* Mobile-only fixes */
+/* ---- Mobile fixes (phones) ---- */
 @media (max-width: 600px) {
-  /* stack header nicely */
-  header { display: block; height: auto; padding: 1rem; }
-  .header_text, .header_pic { width: 100%; }
-  .header_pic { min-height: auto; background-color: transparent; }
+  /* Make sure nothing is wider than the screen */
+  html, body { overflow-x: hidden; }
 
-  /* readable type on small screens */
-  h1 { font-size: 1.8rem; }
+  /* Nav: stack nicely and don’t get cut off */
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+    padding: .75rem 1rem;
+  }
+  .nav-links { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+  /* Header: remove desktop height, stack text and photo */
+  header {
+    display: block;
+    height: auto;           /* was fixed on desktop */
+    padding: 1rem;
+    margin-top: .5rem;      /* prevents nav overlap */
+  }
+  .header_text, .header_pic { width: 100%; }
+  .header_pic { min-height: auto; background: transparent; margin-top: 1rem; }
+
+  /* Tame big headings on small screens */
+  h1 { font-size: 2rem; line-height: 1.1; }
   h2 { font-size: 1.4rem; }
   p  { font-size: 1rem; }
 
-  /* projects: single column */
-  .projects-container { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+  /* Skills & Projects: one column so they don’t get clipped */
+  .skills-container,
+  .projects-container { grid-template-columns: 1fr; }
 
-  /* images scale down */
-  img, video { max-width: 100%; height: auto; }
-
-  /* nav wraps instead of squishing */
-  .nav-container { flex-wrap: wrap; gap: .5rem; }
-  .nav-links { flex-wrap: wrap; gap: 1rem; }
+  /* Images scale down */
+  img { max-width: 100%; height: auto; display: block; }
 }
-
-/* Optional global safety (keeps desktop fine) */
-img, video { max-width: 100%; height: auto; }
