@@ -411,3 +411,30 @@ section h2::after {
   /* Images scale down */
   img { max-width: 100%; height: auto; display: block; }
 }
+
+/* Resume section */
+.resume-section {
+  padding: 3rem 1rem;
+  background: var(--card-background);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.resume-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--heading-color);
+}
+
+.resume-img {
+  width: 100%;
+  max-width: 800px; /* keeps it from being too wide on desktop */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
