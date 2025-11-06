@@ -24,6 +24,7 @@ function loadWeather() {
             displayWeatherError();
         });
 }
+
 // Function to display weather data in the DOM
 function displayWeather(weather) {
     console.log('📊 Displaying weather data...');
@@ -47,10 +48,15 @@ function displayWeather(weather) {
                 <strong>${weather.windSpeed} mph</strong>
             </div>
         </div>
+        <div class="weather-detail">
+    <span>🌡️ Feels Like</span>
+    <strong>${weather.feelsLike}°F</strong>
+</div>
     `;
 
     console.log('✅ Weather displayed successfully!');
 }
+
 // Function to show error message if weather data fails to load
 function displayWeatherError() {
     const weatherDisplay = document.getElementById('weather-display');
@@ -63,6 +69,7 @@ function displayWeatherError() {
         </div>
     `;
 }
+
 // Load weather data when page loads
 loadWeather();
 
