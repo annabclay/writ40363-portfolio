@@ -1,8 +1,21 @@
 # 📅 Campus Event Countdown + Planner
 
-A modern, feature-rich event management application designed specifically for college students to track exams, deadlines, trips, and campus events with real-time countdown timers and browser notifications.
+**Project Zed: AI-Assisted Web Application**  
+WRIT 40363 - Digital Composition and Design Archive  
+Texas Christian University | Fall 2025
 
-![Project Preview](images/preview.png)
+---
+
+## 📋 Project Overview
+
+This is my **Project Zed** submission - an ambitious web application built with AI collaboration to demonstrate upskilled techniques from Projects 1-3. The Campus Event Countdown + Planner is a modern, feature-rich event management application designed specifically for college students to track exams, deadlines, trips, and campus events with real-time countdown timers and browser notifications.
+
+**Project Goals:**
+- Upskill HTML/CSS foundations with advanced animations and responsive design
+- Extend JavaScript fundamentals through modular architecture and complex DOM manipulation
+- Implement browser APIs (Notification API, localStorage) for enhanced functionality
+- Learn new techniques through AI partnership while maintaining code understanding
+- Build a genuinely useful tool for college students
 
 ## 🎯 Features
 
@@ -48,6 +61,28 @@ A modern, feature-rich event management application designed specifically for co
 - Firefox 88+
 - Safari 14+
 
+## 🤖 AI Collaboration
+
+This project was built with significant AI assistance as part of the Project Zed learning objectives. I used **GitHub Copilot with Claude 3.7 Sonnet** as my primary AI development partner.
+
+### What AI Helped With:
+- Architecting the modular JavaScript structure
+- Implementing the Notification API and permission handling
+- Creating the calendar rendering logic
+- Complex date/time calculations for countdowns
+- Responsive CSS Grid layouts
+- Code organization and best practices
+
+### What I Contributed:
+- Project concept and feature selection
+- User experience design decisions
+- Code integration and debugging
+- Testing across different scenarios
+- Customization and refinement of AI-generated code
+- Understanding and explaining every line of code
+
+**Full AI collaboration details, learning moments, challenges, and sample conversations are documented in `AI_COLLABORATION_LOG.md`.**
+
 ## 📖 How to Use
 
 ### Adding an Event
@@ -78,6 +113,36 @@ The app will automatically send browser notifications:
 *Make sure to allow notifications when prompted!*
 
 ## 🛠️ Technical Details
+
+### Upskilled Techniques Demonstrated
+
+This project demonstrates **7+ upskilled techniques** across all course projects:
+
+#### From Project 1 (HTML/CSS) - Upskilled:
+1. **Advanced CSS animations and transitions** - Smooth hover effects, pulsing urgent event indicators, fade-in/slide-in animations
+2. **CSS Grid and Flexbox layouts** - Complex calendar grid system, responsive event cards, flexible form layouts
+3. **Custom CSS properties (variables)** - Complete theming system with light/dark mode support
+4. **Responsive design with 3+ breakpoints** - Mobile-first approach with tablet and desktop optimizations
+5. **Advanced typography and design systems** - Consistent spacing, color scheme, and visual hierarchy
+
+#### From Project 2 (JavaScript) - Upskilled:
+1. **Complex DOM manipulation patterns** - Dynamic event card generation, calendar rendering, real-time updates
+2. **Event delegation and advanced event handling** - Efficient event listeners, form validation, modal interactions
+3. **Data structures beyond simple arrays/objects** - Nested event objects with metadata, date-based filtering
+4. **Form validation and error handling** - Input validation, user feedback, error states
+5. **Modular JavaScript** - Separated concerns across 5 JavaScript files (app.js, storage.js, countdown.js, calendar.js, notifications.js)
+
+#### From Project 3 (APIs & Advanced JS) - Upskilled:
+1. **Browser API integration** - Notification API for event reminders, localStorage for data persistence
+2. **Advanced async patterns** - setInterval for live countdowns, setTimeout for scheduled notifications
+3. **Complex state management** - Event tracking, notification status, view state management
+4. **Data processing and transformation** - Date calculations, time remaining logic, event sorting/filtering
+
+#### New Techniques (Learned via AI):
+1. **Notification API implementation** - Browser notifications with permission handling and scheduling
+2. **Advanced date/time manipulation** - Complex countdown calculations, relative time formatting
+3. **Modular JavaScript architecture** - Manager pattern for code organization
+4. **Accessibility considerations** - ARIA labels, keyboard navigation support, semantic HTML
 
 ### Technologies Used
 - **HTML5**: Semantic markup
@@ -214,12 +279,53 @@ Potential features to add:
 
 This project is open source and available for educational purposes.
 
+## 🎓 Course Context
+
+**Project Zed: AI-Assisted Web Application**  
+WRIT 40363 - Digital Composition and Design Archive  
+Texas Christian University, Fall 2025  
+Due: December 10, 2025
+
+This project represents the culmination of skills learned throughout the semester:
+- **Project 1**: HTML/CSS foundations and responsive design
+- **Project 2**: JavaScript fundamentals and DOM manipulation  
+- **Project 3**: APIs and advanced JavaScript patterns
+- **Project Zed**: Upskilling through AI collaboration
+
+### Project Requirements Met:
+✅ Built completely new application (not enhancement of previous projects)  
+✅ Demonstrates 7+ upskilled techniques across all project areas  
+✅ Integrated browser APIs (Notification, localStorage)  
+✅ Modular JavaScript architecture with separation of concerns  
+✅ Responsive design with mobile-first approach  
+✅ Professional polish with smooth animations and UX  
+✅ Comprehensive documentation and code comments  
+✅ AI collaboration fully documented in separate log  
+✅ Developer reflection completed (see `REFLECTION.md`)  
+
+### Deliverables:
+- ✅ Working web application (deployed on GitHub Pages)
+- ✅ Clean code repository with meaningful commits
+- ✅ `README.md` (this file) with setup instructions and credits
+- ✅ `AI_COLLABORATION_LOG.md` documenting AI partnership
+- ✅ `REFLECTION.md` with developer insights (500-750 words)
+- ✅ Integration into final portfolio
+
 ## 👨‍💻 Author
 
-Built with ❤️ for college students who need to stay organized!
+**Anna Clay**  
+TCU Class of 2026  
+Built with ❤️ (and AI assistance) for college students who need to stay organized!
+
+### Credits & Tools Used:
+- **AI Development Partner**: GitHub Copilot with Claude 3.7 Sonnet
+- **Design Inspiration**: Modern web app UX patterns
+- **Icons**: Unicode emoji for accessibility
+- **Fonts**: System font stack for performance
+- **No external libraries or frameworks** - Pure vanilla JavaScript!
 
 ---
 
-**Need Help?** Check the browser console for any errors or open an issue in the repository.
+**Need Help?** Check the browser console for any errors or reach out via GitHub issues.
 
 **Pro Tip:** Enable notifications and set events a few days in advance to get the most out of this planner!
