@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Event Countdown & Planner</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📅 Campus Event Planner</h1>
+            <p class="subtitle">Never miss an exam, deadline, or campus event!</p>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        </header>
+
+        <main>
+            <!-- Add Event Section -->
+            <section class="add-event-section">
+                <h2>Add New Event</h2>
+                <form id="event-form">
+                    <div class="form-group">
+                        <label for="event-name">Event Name *</label>
+                        <input type="text" id="event-name" required placeholder="e.g., WRIT 403 Final Exam">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="event-date">Date *</label>
+                            <input type="date" id="event-date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="event-time">Time *</label>
+                            <input type="time" id="event-time" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="event-category">Category *</label>
+                            <select id="event-category" required>
+                                <option value="">Select category</option>
+                                <option value="exam">📝 Exam</option>
+                                <option value="deadline">⏰ Deadline</option>
+                                <option value="trip">✈️ Trip</option>
+                                <option value="social">🎉 Social</option>
+                                <option value="class">📚 Class</option>
+                                <option value="other">📌 Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="event-priority">Priority</label>
+                            <select id="event-priority">
+                                <option value="low">Low</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-notes">Notes (Optional)</label>
+                        <textarea id="event-notes" rows="2" placeholder="Add any additional details..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="event-notifications" checked>
+                            Enable notifications for this event
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add Event</button>
+                </form>
+            </section>
+
+            <!-- View Toggle -->
+            <section class="view-controls">
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="list">📋 List View</button>
+                    <button class="view-btn" data-view="calendar">📅 Calendar View</button>
+                </div>
+
+                <div class="filter-controls">
+                    <select id="filter-category">
+                        <option value="all">All Categories</option>
+                        <option value="exam">Exams</option>
+                        <option value="deadline">Deadlines</option>
+                        <option value="trip">Trips</option>
+                        <option value="social">Social</option>
+                        <option value="class">Classes</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <select id="sort-by">
+                        <option value="date-asc">Date (Nearest First)</option>
+                        <option value="date-desc">Date (Farthest First)</option>
+                        <option value="priority">Priority (High to Low)</option>
+                        <option value="name">Name (A-Z)</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- List View -->
+            <section id="list-view" class="events-section active">
+                <h2>Upcoming Events</h2>
+                <div id="events-container" class="events-container">
+                    <div class="empty-state">
+                        <p>🎯 No events yet! Add your first event above.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calendar View -->
+            <section id="calendar-view" class="calendar-section">
+                <div class="calendar-header">
+                    <button id="prev-month" class="nav-btn">‹</button>
+                    <h2 id="current-month">November 2025</h2>
+                    <button id="next-month" class="nav-btn">›</button>
+                    <button id="today-btn" class="btn-today">Today</button>
+                </div>
+                <div class="calendar-grid">
+                    <div class="day-header">Sun</div>
+                    <div class="day-header">Mon</div>
+                    <div class="day-header">Tue</div>
+                    <div class="day-header">Wed</div>
+                    <div class="day-header">Thu</div>
+                    <div class="day-header">Fri</div>
+                    <div class="day-header">Sat</div>
+                    <!-- Days will be generated by JS -->
+                </div>
+                <div id="calendar-events-list" class="calendar-events-list"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with ❤️ for college students | <span id="notification-status">Notifications: Loading...</span></p>
+        </footer>
+    </div>
+
+    <!-- Event Detail Modal -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
