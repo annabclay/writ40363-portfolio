@@ -81,11 +81,91 @@ body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #ee5a6f 100%);
+  background: linear-gradient(to bottom, #87CEEB 0%, #98D8E8 50%, #FFB347 100%);
   color: var(--color-text-dark);
   min-height: 100vh;
   position: relative;
   transition: background 0.5s ease;
+  overflow-x: hidden;
+}
+
+/* Sun for daytime */
+body::before {
+  content: '';
+  position: fixed;
+  top: 80px;
+  right: 100px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #FFD700 0%, #FFA500 100%);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 60px rgba(255, 215, 0, 0.8),
+    0 0 100px rgba(255, 165, 0, 0.6),
+    0 0 140px rgba(255, 140, 0, 0.4);
+  z-index: 0;
+  animation: sunPulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes sunPulse {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 
+      0 0 60px rgba(255, 215, 0, 0.8),
+      0 0 100px rgba(255, 165, 0, 0.6),
+      0 0 140px rgba(255, 140, 0, 0.4);
+  }
+  50% { 
+    transform: scale(1.05);
+    box-shadow: 
+      0 0 80px rgba(255, 215, 0, 0.9),
+      0 0 120px rgba(255, 165, 0, 0.7),
+      0 0 160px rgba(255, 140, 0, 0.5);
+  }
+}
+
+/* Clouds for daytime */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(ellipse 200px 80px at 20% 30%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(ellipse 180px 70px at 25% 32%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(ellipse 160px 60px at 18% 29%, rgba(255, 255, 255, 0.85), transparent),
+    
+    radial-gradient(ellipse 220px 90px at 70% 20%, rgba(255, 255, 255, 0.85), transparent),
+    radial-gradient(ellipse 200px 80px at 75% 22%, rgba(255, 255, 255, 0.75), transparent),
+    radial-gradient(ellipse 180px 70px at 68% 19%, rgba(255, 255, 255, 0.8), transparent),
+    
+    radial-gradient(ellipse 190px 75px at 50% 60%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(ellipse 170px 65px at 55% 62%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(ellipse 150px 60px at 48% 59%, rgba(255, 255, 255, 0.75), transparent),
+    
+    radial-gradient(ellipse 210px 85px at 15% 75%, rgba(255, 255, 255, 0.85), transparent),
+    radial-gradient(ellipse 190px 75px at 20% 77%, rgba(255, 255, 255, 0.75), transparent),
+    radial-gradient(ellipse 170px 65px at 13% 74%, rgba(255, 255, 255, 0.8), transparent),
+    
+    radial-gradient(ellipse 200px 80px at 85% 70%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(ellipse 180px 70px at 90% 72%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(ellipse 160px 60px at 83% 69%, rgba(255, 255, 255, 0.75), transparent);
+  background-repeat: no-repeat;
+  animation: cloudDrift 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes cloudDrift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100px);
+  }
 }
 
 .dashboard {
@@ -446,8 +526,14 @@ body.theme-dark {
   position: relative;
 }
 
+/* Hide sun and clouds in dark mode */
+body.theme-dark::before,
+body.theme-dark::after {
+  display: none;
+}
+
 /* Add stars effect for dark mode */
-body.theme-dark::before {
+body.theme-dark .dashboard::before {
   content: '';
   position: fixed;
   top: 0;
@@ -475,7 +561,7 @@ body.theme-dark::before {
   50% { opacity: 1; }
 }
 
-/* Ensure content is above stars */
+/* Ensure content is above background effects */
 .dashboard {
   position: relative;
   z-index: 1;
