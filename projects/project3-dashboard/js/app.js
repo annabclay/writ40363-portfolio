@@ -142,10 +142,17 @@ loadQuotes();
 // Set up "New Quote" button
 function setupQuotesButton() {
   const newQuoteBtn = document.getElementById('new-quote-btn');
+  const copyQuoteBtn = document.getElementById('copy-quote-btn');
 
   newQuoteBtn.addEventListener('click', () => {
     console.log('New quote button clicked!');
     displayRandomQuote();
+  });
+
+  // Add event listener for copy button
+  copyQuoteBtn.addEventListener('click', () => {
+    console.log('Copy quote button clicked!');
+    copyQuoteToClipboard();
   });
 }
 
@@ -359,3 +366,16 @@ function setupThemeToggle() {
 // Call these when page loads
 initializeTheme();
 setupThemeToggle();
+
+function copyQuoteToClipboard() {
+  const quoteText = document.querySelector('.quote-text').textContent;
+  const quoteAuthor = document.querySelector('.quote-author').textContent;
+  const fullQuote = `${quoteText}\n${quoteAuthor}`;
+
+  navigator.clipboard.writeText(fullQuote)
+    .then(() => alert('Quote copied to clipboard! 📋'))
+    .catch(err => {
+      console.error('Failed to copy quote:', err);
+      alert('Failed to copy quote');
+    });
+}

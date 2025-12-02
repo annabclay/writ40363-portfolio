@@ -320,7 +320,7 @@ header h1 {
 .quote-text {
   font-size: 20px;
   line-height: 1.6;
-  color: var(--color-text-dark);
+  color: #4a5568; /* FIXED: Added missing semicolon */
   font-style: italic;
   margin-bottom: 15px;
   max-width: 600px;
@@ -328,8 +328,17 @@ header h1 {
 
 .quote-author {
   font-size: 16px;
-  color: var(--color-text-muted);
+  color: #4a5568; /* Same color for author */
   font-weight: 500;
+}
+
+/* Make quote text the same color in dark mode */
+body.theme-dark .quote-text {
+  color: #4a5568;
+}
+
+body.theme-dark .quote-author {
+  color: #4a5568;
 }
 
 .btn-primary {
@@ -565,4 +574,32 @@ body.theme-dark .dashboard::before {
 .dashboard {
   position: relative;
   z-index: 1;
+}
+
+.quote-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-secondary {
+  flex: 1;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #2d3748;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(168, 237, 234, 0.4);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
 }
