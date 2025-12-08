@@ -1033,29 +1033,126 @@ footer {
    Responsive Design
    ======================================== */
 
-@media (max-width: 768px) {
+/* Mobile First - Small Screens (320px - 599px) */
+@media (max-width: 599px) {
+    .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    header {
+        padding: 25px 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
     header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .theme-toggle {
+        top: 12px;
+        right: 12px;
+        padding: 8px 12px;
+        font-size: 1.2rem;
+    }
+
+    .add-event-section {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    .add-event-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
     }
 
     .form-row {
         grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    select,
+    textarea {
+        padding: 11px;
+        font-size: 16px; /* Prevents zoom on iOS */
+        border-radius: 6px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+        border-radius: 6px;
+        min-height: 44px; /* Touch-friendly minimum */
+    }
+
+    .btn-primary {
+        width: 100%;
     }
 
     .view-controls {
         flex-direction: column;
-        align-items: stretch;
+        gap: 12px;
+        margin-bottom: 20px;
     }
 
-    .view-toggle,
+    .view-toggle {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .view-btn {
+        flex: 1;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        min-height: 44px;
+    }
+
     .filter-controls {
         width: 100%;
         flex-direction: column;
+        gap: 10px;
     }
 
-    .view-btn,
     .filter-controls select {
         width: 100%;
+        padding: 11px;
+        font-size: 16px;
+        min-height: 44px;
+    }
+
+    .events-section h2,
+    .calendar-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .event-card {
+        padding: 18px 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+
+    .event-title {
+        font-size: 1.25rem;
     }
 
     .event-header {
@@ -1063,21 +1160,22 @@ footer {
         gap: 10px;
     }
 
+    .countdown {
+        padding: 15px;
+        margin: 12px 0;
+    }
+
     .countdown-timer {
         gap: 10px;
+        margin-top: 12px;
     }
 
     .time-value {
         font-size: 1.5rem;
     }
 
-    .calendar-header {
-        flex-wrap: wrap;
-    }
-
-    .calendar-header h2 {
-        width: 100%;
-        order: -1;
+    .time-label {
+        font-size: 0.75rem;
     }
 
     .calendar-grid {
@@ -1086,33 +1184,308 @@ footer {
     }
 
     .calendar-day {
-        min-height: 60px;
+        min-height: 50px;
         padding: 5px;
-        font-size: 0.85rem;
+        font-size: 0.75rem;
     }
 
     .day-header {
-        font-size: 0.9rem;
-        padding: 10px 5px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 10px;
+        font-size: 0.85rem;
+        padding: 8px 4px;
     }
 
-    header {
-        padding: 30px 15px;
+    .event-dot {
+        width: 6px;
+        height: 6px;
     }
 
-    .add-event-section {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
         padding: 20px;
     }
 
-    .theme-toggle {
-        top: 10px;
-        right: 10px;
-        padding: 8px 12px;
+    footer {
+        padding: 20px 15px;
+        margin-top: 40px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablets (600px - 1023px) */
+@media (min-width: 600px) and (max-width: 1023px) {
+    .container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    header {
+        padding: 35px 25px;
+        margin-bottom: 30px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.05rem;
+    }
+
+    .add-event-section {
+        padding: 25px 20px;
+        margin-bottom: 30px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    select,
+    textarea {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        min-height: 44px;
+    }
+
+    .view-controls {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .view-toggle {
+        gap: 10px;
+    }
+
+    .view-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .filter-controls {
+        gap: 15px;
+    }
+
+    .filter-controls select {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+        min-height: 44px;
+    }
+
+    .event-card {
+        padding: 22px 20px;
+        margin-bottom: 20px;
+    }
+
+    .event-title {
+        font-size: 1.35rem;
+    }
+
+    .calendar-grid {
+        gap: 8px;
+        padding: 15px;
+    }
+
+    .calendar-day {
+        min-height: 80px;
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .calendar-header {
+        gap: 15px;
+    }
+
+    .calendar-header h2 {
+        font-size: 1.6rem;
+        min-width: 200px;
+    }
+
+    footer {
+        padding: 25px 20px;
+        margin-top: 50px;
+    }
+}
+
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+    .container {
+        padding: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header {
+        padding: 50px 30px;
+        margin-bottom: 40px;
+        border-radius: 15px;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        font-size: 1.15rem;
+    }
+
+    .add-event-section {
+        padding: 35px 30px;
+        margin-bottom: 40px;
+        border-radius: 15px;
+    }
+
+    .add-event-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .form-group {
+        margin-bottom: 22px;
+    }
+
+    label {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    select,
+    textarea {
+        padding: 13px;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+
+    .btn {
+        padding: 13px 28px;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .view-controls {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+        margin-bottom: 35px;
+    }
+
+    .view-toggle {
+        gap: 12px;
+    }
+
+    .view-btn {
+        padding: 11px 22px;
+        font-size: 0.95rem;
+    }
+
+    .filter-controls {
+        gap: 15px;
+    }
+
+    .filter-controls select {
+        padding: 11px 15px;
+        font-size: 0.95rem;
+        width: auto;
+        min-width: 180px;
+    }
+
+    .events-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .event-card {
+        padding: 28px 25px;
+        margin-bottom: 25px;
+        border-radius: 12px;
+    }
+
+    .event-title {
+        font-size: 1.5rem;
+    }
+
+    .event-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .countdown {
+        padding: 25px;
+        margin: 18px 0;
+    }
+
+    .countdown-timer {
+        gap: 25px;
+    }
+
+    .time-value {
+        font-size: 2.2rem;
+    }
+
+    .calendar-header {
+        gap: 25px;
+    }
+
+    .calendar-header h2 {
+        font-size: 1.8rem;
+        min-width: 250px;
+    }
+
+    .calendar-grid {
+        gap: 12px;
+        padding: 25px;
+    }
+
+    .calendar-day {
+        min-height: 120px;
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .day-header {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-width: 600px;
+        margin: 5% auto;
+        padding: 35px;
+    }
+
+    footer {
+        padding: 35px 30px;
+        margin-top: 60px;
+        font-size: 0.95rem;
     }
 }
