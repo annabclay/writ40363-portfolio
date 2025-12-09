@@ -1,0 +1,23 @@
+What did you build and why?
+
+For this project, I created a campus event planner. The purpose of this website was to enter assignments, trips, deadlines, and other items on a college student's schedule into a countdown. Usually, I use a sticky note on my computer to keep track of assignments, so this lets me stay on top of my tasks and deadlines in a more organized and efficient way. The website is fully functional and sends you a notification when it is time for the event.
+
+What skills from Projects 1–3 did you upskill? How?
+
+I reused and improved several skills from my previous projects. From Project 2, I learned the importance of using localStorage so that data doesn’t disappear when the page refreshes. I made this mistake back then, but by Project 3, I understood how to fix it. For Project Zed, I was already confident with localStorage, so I used it correctly to ensure events persist across sessions. I also reused my understanding of DOM manipulation and buttons from Projects 2 and 3. For example, the delete button in my event planner works similarly to the delete button in my favorites tracker. I knew how to structure the function and update the display without refreshing the page. I also brought over my theme toggle skills from Project 3. I loved the day/night button in my dashboard project, so I mimicked that feature here. During the day, I used a sunny sky with clouds, and at night, a darker sky with stars. This helped me practice CSS gradients and theming in a more advanced way.
+
+How did AI change your development process?
+
+AI changed my development process in many ways. When coming up with an idea for the project, I wanted a tool to keep me organized, so I asked ChatGPT for ideas and the correct wording to tell the Claude Sonnet 4 bot what to do. When I landed on the event planner idea, I asked the bot to get the website started for me by taking some skills and ideas from my previous projects. Right off the bat, I liked the website it created, but, of course, I wanted to make many tweaks. AI introduced concepts I wasn’t familiar with, such as adding calendar input features and the timing functions needed to calculate the countdown. When that happened, I looked up documentation and examples to understand the code rather than just copying it.
+
+What surprised you about working with AI?
+
+When using the AI, I realized that even if it is tempting to ask it to do every step for you, this isn't always the best idea. This is because only you really know what your vision is, and sometimes even asking for it can quickly ruin the entire website. Fixing the whole website is more work than just editing a minor fix. When tweaking small things like color, formatting, or wording, I manually fixed this myself. I am happy we didn't have access to the AI tool at the beginning of the class, because I wouldn’t have known how to fix these mistakes. Thankfully, when the AI made suggestions, I was able to understand and teach myself why it was adding things, rather than being clueless when creating. Instead of replacing my skills, AI pushed me to become more careful and independent.
+
+What would you do differently next time?
+
+Something I would do differently next time is research more of what VS Code and web development tools are capable of before making stylistic changes. When trying to enhance my website visually, I only used simple prompts like “make the website look cooler” or “add a gradient or graphic.” I didn’t know what else to ask for, or what terms existed to describe more advanced styling or design features. I’m curious how much better my project could have been if I knew the right words or techniques to request. Next time, I want to learn more about web design tools so I can intentionally choose enhancements rather than guess.
+
+How has your confidence as a developer changed?
+
+My confidence grew more during Project Zed than in any previous assignment. This was the first time I felt capable of building a website from scratch, fixing my own mistakes, and using AI intentionally. In project 1, I had to ask you for help every time there was a mistake, and I was so confused why things weren't working. Now I can understand what is going on more, and when I am stuck, I know how to fix the problem. I created something functional, personal, and something I will actually use in my daily life. This project proved to me that I really can think and work like a web developer. If I had tried to do this project at the beginning of the semester, I would have blindly used AI and not understood any of it. With the knowledge I have gained over the semester, I can use AI to sharpen my coding skills and learn new ones.

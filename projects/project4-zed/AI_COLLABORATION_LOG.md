@@ -1,6 +1,6 @@
 Tools Used:
 ChatGBT to help me come up with what type of app to create
-Claude Sonnet 4.5: Help me build the app with my idea
+Claude Sonnet 4.5: Help me build the app with my idea and using skills from my past projects I have already created
 
 
 
